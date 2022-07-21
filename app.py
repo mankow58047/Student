@@ -10,7 +10,7 @@ params = config()
 conn = psycopg2.connect(**params) #connect to postgresql server
  
 @app.route('/')
-def Index():
+def index():
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     s = "SELECT * FROM students"
     cur.execute(s) # Execute the SQL
