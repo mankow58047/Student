@@ -9,7 +9,7 @@ app.secret_key = "anykey"
 params = config()
 conn = psycopg2.connect(**params) #connect to postgresql server
  
-@app.route('/index')
+@app.route('/')
 def Index():
     cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
     s = "SELECT * FROM students"
