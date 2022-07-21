@@ -19,4 +19,4 @@ def config(filename = 'database.ini', section = 'postgresql'):
 
     return db
 
-databaseURL: 
+#databaseURL: 
