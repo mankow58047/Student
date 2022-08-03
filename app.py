@@ -56,7 +56,7 @@ def update_student(id):
         """, (fname, lname, email, id))
         flash('Student Updated Successfully')
         conn.commit()
-        return redirect(url_for('Index'))
+        return redirect(url_for('index'))
  
 @app.route('/delete/<string:id>', methods = ['POST','GET'])
 def delete_student(id):
