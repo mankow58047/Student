@@ -27,7 +27,7 @@ def add_student():
         cur.execute("INSERT INTO students (fname, lname, email) VALUES (%s,%s,%s)", (fname, lname, email))
         conn.commit()
         flash('Student Added successfully')
-        return redirect(url_for('Index'))
+        return redirect(url_for('index'))
  
 @app.route('/edit/<id>', methods = ['POST', 'GET'])
 def get_employee(id):
